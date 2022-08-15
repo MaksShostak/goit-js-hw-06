@@ -8,7 +8,7 @@ const onInputValue = (event) => {
         !== Number(inputEL.getAttribute("data-length")))
     { inputEL.classList.add("invalid"); inputEL.classList.remove("valid") }
     else { inputEL.classList.add("valid"); inputEL.classList.remove("invalid")  }
-        return
+      
      } 
 
 inputEL.addEventListener("blur", onInputValue)

@@ -8,7 +8,7 @@ const onInputValue = (event) => {
     event.preventDefault();
     spanTextEL.style.fontSize = `${event.currentTarget.value}px` 
   
-       return
+      
      } 
  
 inputEL.addEventListener("input", onInputValue)
