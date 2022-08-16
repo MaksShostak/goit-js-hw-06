@@ -1,14 +1,18 @@
-const inputEL = document.querySelector("input")
+const inputEL = document.querySelector("input");
 console.log(inputEL);
 
-
 const onInputValue = (event) => {
-    event.preventDefault();
-    if (Number(event.currentTarget.value.length)
-        !== Number(inputEL.getAttribute("data-length")))
-    { inputEL.classList.add("invalid"); inputEL.classList.remove("valid") }
-    else { inputEL.classList.add("valid"); inputEL.classList.remove("invalid")  }
-      
-     } 
+  event.preventDefault();
+  if (
+    Number(event.currentTarget.value.length) !==
+    Number(inputEL.getAttribute("data-length"))
+  ) {
+    inputEL.classList.add("invalid");
+    inputEL.classList.remove("valid");
+  } else {
+    inputEL.classList.add("valid");
+    inputEL.classList.remove("invalid");
+  }
+};
 
-inputEL.addEventListener("blur", onInputValue)
+inputEL.addEventListener("blur", onInputValue);

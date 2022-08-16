@@ -1,8 +1,8 @@
-const counterValue = document.querySelector("#value")
-const counterEL = document.querySelector("#counter")
-const decrementBtnEL = counterEL.firstElementChild
-const incrementBtnEL = counterEL.lastElementChild
-let  initialValue = Number(counterValue.textContent)
+const counterValue = document.querySelector("#value");
+const counterEL = document.querySelector("#counter");
+const decrementBtnEL = counterEL.firstElementChild;
+const incrementBtnEL = counterEL.lastElementChild;
+let initialValue = Number(counterValue.textContent);
 console.log(decrementBtnEL);
 
 // // 1 варіант
@@ -13,35 +13,29 @@ console.log(decrementBtnEL);
 //    return
 // })
 
-
 // incrementBtnEL.addEventListener("click", (event) => {
-//     initialValue += 1; 
+//     initialValue += 1;
 //     counterValue.textContent = initialValue
 //     event.preventDefault()
 //    return
 // })
 
-
 // 2 варіант
 
+const onButtonClickDown = (event) => {
+  initialValue -= 1;
+  counterValue.textContent = initialValue;
+  event.preventDefault();
+  return;
+};
+const onButtonClickUp = (event) => {
+  initialValue += 1;
+  counterValue.textContent = initialValue;
+  event.preventDefault();
+  return;
+};
+decrementBtnEL.addEventListener("click", onButtonClickDown);
 
-const  onButtonClickDown = (event) => {
-   initialValue -= 1;
-    counterValue.textContent = initialValue
-    event.preventDefault()
-   return
-   
-}
-const  onButtonClickUp = (event) => {
-  initialValue += 1; 
-    counterValue.textContent = initialValue
-    event.preventDefault()
-   return
-   
-}
-decrementBtnEL.addEventListener('click', onButtonClickDown)
-
-
-incrementBtnEL.addEventListener("click", onButtonClickUp)
+incrementBtnEL.addEventListener("click", onButtonClickUp);
 
 // const updateCounter =()=>{ initialValue +=1}
