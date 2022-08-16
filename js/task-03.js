@@ -17,14 +17,14 @@ const images = [
 const galleryListEL = document.querySelector(".gallery")
 galleryListEL.style.listStyle=("none")
 
-
 const makeGalleryListMarkup = ({ url, alt }) => {
   return `<li class="gallery__item"><img src=${url} alt=${alt} width = 480 class="gallery__img" ></li>`
 }
-
+const  gallery = makeGalleryListMarkup(images)
 const makeGalleryList = images.map(makeGalleryListMarkup).join("")
 
 galleryListEL.insertAdjacentHTML("afterbegin", makeGalleryList)
+
 console.log(galleryListEL);
 
 // 2 варіант
