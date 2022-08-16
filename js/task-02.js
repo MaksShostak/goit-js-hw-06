@@ -31,12 +31,11 @@ const makeList = ((elements) => {
   const itemEL = document.createElement("li");
   itemEL.textContent = `${element}`;
   itemEL.classList.add("item");
-  
-  
-  
-  return itemEL;
+    
+    return itemEL;
 })
 })
 const items = makeList(ingredients)
+
 ingredientsListEL.prepend(...items);
 console.log(ingredientsListEL);
