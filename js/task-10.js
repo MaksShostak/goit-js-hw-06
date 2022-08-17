@@ -28,6 +28,7 @@ const createBoxes = (event) => {
 
 const destroyBoxes = () => {
   refs.divBoxes.innerHTML = "";
+  amount = 0;
 };
 
 refs.destroyBtn.addEventListener("click", destroyBoxes);
